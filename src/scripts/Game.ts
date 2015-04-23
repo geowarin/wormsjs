@@ -4,8 +4,8 @@ module Wormsjs {
   export class Game extends Phaser.Game {
     constructor() {
       super({
-        width: 640,
-        height: 480,
+        width: 800,
+        height: 600,
         transparent: false,
         enableDebug: true
       });
