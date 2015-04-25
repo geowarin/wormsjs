@@ -6,7 +6,8 @@ module Wormsjs.State {
       this.preloadBar = this.add.sprite(290, 290, 'preload-bar');
       this.load.setPreloadSprite(this.preloadBar);
 
-      this.load.spritesheet('worm-walk', 'assets/sprites/worm-walk.png', 60, 60);
+      this.stage.backgroundColor = '#8585C2';
+      this.load.atlas('worm', 'assets/sprites/worm.png', 'assets/sprites/worm.json')
     }
 
     create() {

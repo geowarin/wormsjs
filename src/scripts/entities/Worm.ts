@@ -5,10 +5,11 @@ module entities {
     speed:number = 100;
 
     constructor(game:Phaser.Game) {
-      super(game, 0, 0, 'worm-walk');
+      super(game, 0, 0, 'worm');
 
       this.anchor.setTo(0.5);
-      this.animations.add('run');
+      this.animations.add('walk', Phaser.Animation.generateFrameNames('walk', 1, 15, '', 2), 30, true, false);
+      this.animations.play('walk');
 
       game.physics.enable(this, Phaser.Physics.ARCADE);
     }
@@ -35,7 +36,7 @@ module entities {
       if (vel.isZero()) {
         this.animations.stop();
       } else {
-        this.animations.play('run', 30, true);
+        this.animations.play('walk');
       }
     }
   }

@@ -28,7 +28,8 @@ var tsProject = $.typescript.createProject({
   declarationFiles: true,
   noExternalResolve: true,
   sortOutput: true,
-  sourceRoot: '../scripts'
+  sourceRoot: '../scripts',
+  target: 'ES5'
 });
 
 gulp.task('typescript', function () {
