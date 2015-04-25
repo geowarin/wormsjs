@@ -1,1 +1,8 @@
 http://www.spriters-resource.com/pc_computer/wormsgeddon/sheet/13597/
+
+
+Make transparent
+convert -median 1 -fuzz 5% -transparent '#8585C2' worm-walk.png worm-walk2.png
+
+Modify all
+mogrify  -median 1 -fuzz 5% -transparent '#8585C2' *.png
